@@ -75,6 +75,15 @@
     #media-session.enable = true;
   };
 
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -82,7 +91,7 @@
   users.users.zeta = {
     isNormalUser = true;
     description = "zeta";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" "input" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -105,6 +114,26 @@
     kitty
     waybar
     foot
+    python3
+    rofi
+    mako
+    swww
+    networkmanagerapplet
+    pavucontrol
+    blueman
+    brightnessctl
+    wl-clipboard
+    grim
+    slurp
+    wf-recorder
+  ];
+
+  # Fonts
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-emoji
+    font-awesome
+    jetbrains-mono
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
