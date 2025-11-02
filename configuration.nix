@@ -116,6 +116,7 @@
     foot
     python3
     rofi
+    wofi
     mako
     swww
     networkmanagerapplet
