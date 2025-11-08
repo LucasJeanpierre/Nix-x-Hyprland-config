@@ -1,5 +1,5 @@
-# Nix-x-Hyprland-config
-Nix x Hyprland config
+# NixOS-conf
+NixOS configuration
 
 ## Build
 ```Shell
